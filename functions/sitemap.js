@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const fetch = require("node-fetch").default;
 
 const NOTION_API = "https://notion-api.r-bt.workers.dev/v1";
 
