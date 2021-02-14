@@ -1,4 +1,5 @@
 [build]
+    command = "cd functions && npm install && cd ../ && npm run export"
     functions = "./functions"
 
 [[redirects]]
