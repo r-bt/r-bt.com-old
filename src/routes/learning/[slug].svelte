@@ -1,29 +1,38 @@
 <script context="module">
   export function preload(page) {
-    return { id: page.params.slug };
+    return { slug: page.params.slug };
   }
 </script>
 
 <script>
-  import { stores } from "@sapper/app";
-  import "prismjs/themes/prism-okaidia.css";
   import { onMount } from "svelte";
+  import { Notion } from "notion-in-svelte";
+  import "prismjs/themes/prism-okaidia.css";
+  // Stores
+  import { posts, getPosts } from "./posts";
+  // COMPONENTS
   import Profile from "../../components/Profile.svelte";
   import config from "../../config";
-  import { Notion } from "notion-in-svelte";
 
-  export let id;
+  export let slug;
   let blocks;
 
-  onMount(async () => {
-    fetch(`${config.NOTION_API}/page/${id}`).then(async (res) => {
-      const post = await res.json();
+  $: if ($posts && process.browser) {
+    const post = $posts.find((post) => post.slug === slug);
+    if (post) {
+      fetch(`${config.NOTION_API}/page/${post.id}`).then(async (res) => {
+        const post = await res.json();
 
-      const objectArray = Object.entries(post);
-      blocks = objectArray.map(([key, value]) => {
-        return value.value;
+        const objectArray = Object.entries(post);
+        blocks = objectArray.map(([key, value]) => {
+          return value.value;
+        });
       });
-    });
+    }
+  }
+
+  onMount(() => {
+    getPosts();
   });
 </script>
 
