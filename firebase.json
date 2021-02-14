@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "public": "__sapper__/export",
+    "predeploy": "yarn export",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
