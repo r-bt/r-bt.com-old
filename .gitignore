@@ -6,3 +6,6 @@ yarn-error.log
 /__sapper__/
 
 .firebase/
+
+# Local Netlify folder
+.netlify

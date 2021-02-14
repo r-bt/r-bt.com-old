@@ -1,14 +1,14 @@
-// const fetch = require("node-fetch");
+const fetch = require("node-fetch");
 const fs = require("fs");
 //Change 123
 
-const NOTION_API = "https://notion-api.r-bt.workers.dev/v1";
-
-const getNotionTable = (id) => {
-  return fetch(`${NOTION_API}/table/${id}`).then((resp) => resp.json());
-};
-
 exports.handler = async (event) => {
+  const NOTION_API = "https://notion-api.r-bt.workers.dev/v1";
+
+  const getNotionTable = (id) => {
+    return fetch(`${NOTION_API}/table/${id}`).then((resp) => resp.json());
+  };
+
   // const domain = "https://r-bt.com";
 
   // const static = ["/", "/about", "/learning", "/blog", "/links"];
