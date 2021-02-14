@@ -1,10 +1,10 @@
-const fetch = require("node-fetch");
+const axios = require("axios");
 //Change
 
 const NOTION_API = "https://notion-api.r-bt.workers.dev/v1";
 
 const getNotionTable = (id) => {
-  return fetch(`${NOTION_API}/table/${id}`).then((resp) => resp.json());
+  return axios.get(`${NOTION_API}/table/${id}`).then((resp) => resp.data);
 };
 
 exports.handler = async (event) => {
