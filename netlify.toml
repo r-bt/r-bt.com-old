@@ -1,5 +1,5 @@
 [build]
-    command = "echo 'Custom Build Script' && cd functions && npm install && cd ../ && npm run export"
+    command = "echo 'Custom Build Script' && cd functions && npm install && ls && cd ../ && npm run export"
     functions = "./functions"
 
 [[redirects]]
