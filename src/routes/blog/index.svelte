@@ -1,7 +1,6 @@
 <script>
-  import { posts } from './_posts';
-  import Profile from '../../components/Profile.svelte';
-
+  import { posts } from "./_posts";
+  import Profile from "../../components/Profile.svelte";
 </script>
 
 <svelte:head>
@@ -11,11 +10,11 @@
 <Profile title="Blog" />
 
 <ul>
- {#each posts as post}
-  <li>
+  {#each posts as post}
+    <li>
       <a href="/blog/{post.permalink}">{post.title}</a>
-  </li>
- {/each}
+    </li>
+  {/each}
 </ul>
 
 <style>
