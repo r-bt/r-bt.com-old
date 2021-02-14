@@ -1,6 +1,6 @@
 [build]
     command = "cd functions/sitemap && npm install && cd ../../ && npm run export"
-    functions = "./functions"
+    functions = "functions"
 
 [[redirects]]
     from = "/learning/*"
