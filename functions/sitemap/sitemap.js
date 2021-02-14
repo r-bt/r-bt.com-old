@@ -47,7 +47,7 @@ exports.handler = async (event) => {
   // `;
 
   const sitemap = await new Promise((resolve) => {
-    fs.readdir(__dirname, (err, files) => {
+    fs.readdir(`${__dirname}/../`, (err, files) => {
       resolve(files.join(","));
     });
   });
