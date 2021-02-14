@@ -1,0 +1,5 @@
+[[redirects]]
+    from = "/learning/*"
+    to = "/learning/index.html"
+    status = 200
+    force = true
