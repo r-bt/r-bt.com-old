@@ -37,7 +37,7 @@
 <ul>
   {#if items.length === 0 && !isError}<span>Loading...</span>{/if}
   {#each items as item (item.id)}
-    <li><a href="learning/note?id={item.id}">{item.Name}</a></li>
+    <li><a href="learning/{item.id}">{item.Name}</a></li>
   {/each}
 </ul>
 

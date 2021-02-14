@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --entry '/ learning/note'",
+    "export": "sapper export --entry '/'",
     "start": "node __sapper__/build",
     "postinstall": "patch-package"
   },

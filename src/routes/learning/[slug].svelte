@@ -1,18 +1,21 @@
+<script context="module">
+  export function preload(page) {
+    return { id: page.params.slug };
+  }
+</script>
+
 <script>
   import { stores } from "@sapper/app";
   import "prismjs/themes/prism-okaidia.css";
   import { onMount } from "svelte";
   import Profile from "../../components/Profile.svelte";
-  const { page } = stores();
   import config from "../../config";
   import { Notion } from "notion-in-svelte";
 
+  export let id;
   let blocks;
 
-  $: console.log({ blocks });
-
   onMount(async () => {
-    const { id } = $page.query;
     fetch(`${config.NOTION_API}/page/${id}`).then(async (res) => {
       const post = await res.json();
 
