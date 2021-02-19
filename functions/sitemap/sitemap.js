@@ -6,15 +6,23 @@ const API_ENDPOINT = "https://icanhazdadjoke.com/";
 
 exports.handler = async (event) => {
   const NOTION_API = "https://notion-api.r-bt.workers.dev/v1";
+  const id = "489999d5f3d240c0a4fedd9de71cbb6f";
 
   console.log({ fetch });
 
-  return fetch(API_ENDPOINT, { headers: { Accept: "application/json" } })
+  console.log(`${NOTION_API}/table/${id}`);
+
+  return fetch(`${NOTION_API}/table/${id}`, {
+    headers: { Accept: "application/json" },
+  })
     .then((response) => response.json())
-    .then((data) => ({
-      statusCode: 200,
-      body: data.joke,
-    }))
+    .then((data) => {
+      console.log({ data });
+      return {
+        statusCode: 200,
+        body: "Something....",
+      };
+    })
     .catch((error) => ({ statusCode: 422, body: String(error) }));
 
   // const getNotionTable = (id) => {
