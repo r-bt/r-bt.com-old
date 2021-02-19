@@ -43,6 +43,8 @@ exports.handler = async (event) => {
     </urlset>
   `;
 
+  console.log("Hello therer");
+
   return {
     statusCode: 200,
     contentType: "text/html",
