@@ -13,10 +13,10 @@ exports.handler = async (event) => {
     return { statusCode: 422, body: String(e) };
   }
 
-  console.log({ pages });
+  const domain = "https://r-bt.com";
+  const static = ["/", "/about", "/learning", "/blog", "/links"];
 
-  // const domain = "https://r-bt.com";
-  // const static = ["/", "/about", "/learning", "/blog", "/links"];
+  pages.forEach((page) => console.log({ page }));
 
   // const filteredPages = pages
   //   .filter((item) => item.Status === "Visible" && item.slug)
