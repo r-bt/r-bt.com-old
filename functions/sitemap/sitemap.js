@@ -14,43 +14,43 @@ exports.handler = async (event) => {
     return { statusCode: 422, body: String(e) };
   }
 
-  const domain = "https://r-bt.com";
-  const static = ["/", "/about", "/learning", "/blog", "/links"];
+  // const domain = "https://r-bt.com";
+  // const static = ["/", "/about", "/learning", "/blog", "/links"];
 
-  const filteredPages = pages
-    .filter((item) => item.Status === "Visible" && item.slug)
-    .map((item) => item.slug);
+  // const filteredPages = pages
+  //   .filter((item) => item.Status === "Visible" && item.slug)
+  //   .map((item) => item.slug);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${static
-        .map(
-          (page) =>
-            `
-          <url>
-            <loc>${domain}${page}</loc>
-            <changefreq>weekly</changefreq>
-          </url>
-        `
-        )
-        .join("")}
-        ${filteredPages
-          .map(
-            (page) =>
-              `
-            <url>
-              <loc>${domain}/${page}</loc>
-              <changefreq>weekly</changefreq>
-            </url>
-          `
-          )
-          .join("")}
-    </urlset>
-  `;
+  // const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  //   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  //     ${static
+  //       .map(
+  //         (page) =>
+  //           `
+  //         <url>
+  //           <loc>${domain}${page}</loc>
+  //           <changefreq>weekly</changefreq>
+  //         </url>
+  //       `
+  //       )
+  //       .join("")}
+  //       ${filteredPages
+  //         .map(
+  //           (page) =>
+  //             `
+  //           <url>
+  //             <loc>${domain}/${page}</loc>
+  //             <changefreq>weekly</changefreq>
+  //           </url>
+  //         `
+  //         )
+  //         .join("")}
+  //   </urlset>
+  // `;
 
   return {
     statusCode: 200,
     contentType: "text/html",
-    body: sitemap,
+    body: "hello there",
   };
 };
