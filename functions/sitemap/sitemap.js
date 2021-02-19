@@ -8,6 +8,7 @@ exports.handler = async (event) => {
   };
 
   const domain = "https://r-bt.com";
+
   const static = ["/", "/about", "/learning", "/blog", "/links"];
 
   const learningPages = (
