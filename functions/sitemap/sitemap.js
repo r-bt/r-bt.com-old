@@ -15,10 +15,9 @@ exports.handler = async (event) => {
 
   console.log({ pages });
 
-  // const domain = "https://r-bt.com";
-  // const static = ["/", "/about", "/learning", "/blog", "/links"];
-  // console.log({ static });
+  const domain = "https://r-bt.com";
 
+  console.log({ domain });
   pages.forEach((page) => console.log({ page }));
 
   // const filteredPages = pages
@@ -27,7 +26,7 @@ exports.handler = async (event) => {
 
   // const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   //   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  //     ${static
+  //     ${["/", "/about", "/learning", "/blog", "/links"]
   //       .map(
   //         (page) =>
   //           `
