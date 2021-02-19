@@ -13,7 +13,7 @@ exports.handler = async (event) => {
     return { statusCode: 422, body: String(e) };
   }
 
-  const domain = "https://r-bt.com";
+  // const domain = "https://r-bt.com";
   const static = ["/", "/about", "/learning", "/blog", "/links"];
 
   pages.forEach((page) => console.log({ page }));
