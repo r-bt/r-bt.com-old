@@ -9,43 +9,44 @@ exports.handler = async (event) => {
     return fetch(`${NOTION_API}/table/${id}`).then((resp) => resp.json());
   };
 
-  // const domain = "https://r-bt.com";
+  const domain = "https://r-bt.com";
 
-  // const static = ["/", "/about", "/learning", "/blog", "/links"];
+  const static = ["/", "/about", "/learning", "/blog", "/links"];
 
-  // const learningPages = (
-  //   await getNotionTable("489999d5f3d240c0a4fedd9de71cbb6f")
-  // )
-  //   .filter((item) => item.Status === "Visible" && item.slug)
-  //   .map((item) => item.slug);
+  const learningPages = (
+    await getNotionTable("489999d5f3d240c0a4fedd9de71cbb6f")
+  )
+    .filter((item) => item.Status === "Visible" && item.slug)
+    .map((item) => item.slug);
 
-  // const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-  //   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  //     ${static
-  //       .map(
-  //         (page) =>
-  //           `
-  //         <url>
-  //           <loc>${domain}${page}</loc>
-  //           <changefreq>weekly</changefreq>
-  //         </url>
-  //       `
-  //       )
-  //       .join("")}
-  //       ${learningPages
-  //         .map(
-  //           (page) =>
-  //             `
-  //           <url>
-  //             <loc>${domain}/${page}</loc>
-  //             <changefreq>weekly</changefreq>
-  //           </url>
-  //         `
-  //         )
-  //         .join("")}
-  //   </urlset>
-  // `;s
-  const sitemap = await new Promise((resolve) => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${static
+        .map(
+          (page) =>
+            `
+          <url>
+            <loc>${domain}${page}</loc>
+            <changefreq>weekly</changefreq>
+          </url>
+        `
+        )
+        .join("")}
+        ${learningPages
+          .map(
+            (page) =>
+              `
+            <url>
+              <loc>${domain}/${page}</loc>
+              <changefreq>weekly</changefreq>
+            </url>
+          `
+          )
+          .join("")}
+    </urlset>
+  `;
+
+  const sitemap2 = await new Promise((resolve) => {
     fs.readdir(`${__dirname}/node_modules`, (err, files) => {
       resolve(files.join(","));
     });
@@ -54,6 +55,6 @@ exports.handler = async (event) => {
   return {
     statusCode: 200,
     contentType: "text/html",
-    body: sitemap,
+    body: sitemap2,
   };
 };
