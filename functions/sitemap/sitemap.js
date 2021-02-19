@@ -51,6 +51,6 @@ exports.handler = async (event) => {
   return {
     statusCode: 200,
     contentType: "text/html",
-    body: sitemap2,
+    body: sitemap,
   };
 };
