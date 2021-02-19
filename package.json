@@ -13,6 +13,7 @@
     "@jackfranklin/rollup-plugin-markdown": "^0.2.0",
     "@leveluptuts/svelte-notion": "0.0.7",
     "compression": "^1.7.1",
+    "encoding": "^0.1.13",
     "node-fetch": "^2.6.1",
     "notion-in-svelte": "^0.2.0",
     "patch-package": "^6.2.2",
