@@ -21,36 +21,36 @@ exports.handler = async (event) => {
     .filter((item) => item.Status === "Visible" && item.slug)
     .map((item) => item.slug);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${static
-        .map(
-          (page) =>
-            `
-          <url>
-            <loc>${domain}${page}</loc>
-            <changefreq>weekly</changefreq>
-          </url>
-        `
-        )
-        .join("")}
-        ${filteredPages
-          .map(
-            (page) =>
-              `
-            <url>
-              <loc>${domain}/${page}</loc>
-              <changefreq>weekly</changefreq>
-            </url>
-          `
-          )
-          .join("")}
-    </urlset>
-  `;
+  // const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  //   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  //     ${static
+  //       .map(
+  //         (page) =>
+  //           `
+  //         <url>
+  //           <loc>${domain}${page}</loc>
+  //           <changefreq>weekly</changefreq>
+  //         </url>
+  //       `
+  //       )
+  //       .join("")}
+  //       ${filteredPages
+  //         .map(
+  //           (page) =>
+  //             `
+  //           <url>
+  //             <loc>${domain}/${page}</loc>
+  //             <changefreq>weekly</changefreq>
+  //           </url>
+  //         `
+  //         )
+  //         .join("")}
+  //   </urlset>
+  // `;
 
   return {
     statusCode: 200,
     contentType: "text/xml",
-    body: sitemap,
+    body: "hello there",
   };
 };
