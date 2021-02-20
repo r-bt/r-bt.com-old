@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
 
   console.log({ resp });
 
-  const static = ["hello", "goodbye"];
+  //   const static = ["hello", "goodbye"];
 
   return {
     statusCode: 200,
