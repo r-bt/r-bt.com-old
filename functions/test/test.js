@@ -14,6 +14,7 @@ exports.handler = async (event, context) => {
 
   console.log({ resp });
 
+  const somethingElse = ["goodday"];
   //   const static = ["hello", "goodbye"];
 
   return {
