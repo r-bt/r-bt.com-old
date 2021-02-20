@@ -39,7 +39,7 @@ exports.handler = async (event) => {
             (page) =>
               `
             <url>
-              <loc>${domain}/${page}</loc>
+              <loc>${domain}/learning/${page}</loc>
               <changefreq>weekly</changefreq>
             </url>
           `
