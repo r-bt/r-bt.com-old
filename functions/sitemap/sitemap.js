@@ -20,9 +20,11 @@ exports.handler = async (event) => {
   console.log({ domain });
   pages.forEach((page) => console.log({ page }));
 
-  // const filteredPages = pages
-  //   .filter((item) => item.Status === "Visible" && item.slug)
-  //   .map((item) => item.slug);
+  const filteredPages = pages
+    .filter((item) => item.Status === "Visible" && item.slug !== undefined)
+    .map((item) => item.slug);
+
+  console.log({ filteredPages });
 
   // const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   //   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
