@@ -4,7 +4,7 @@ const API_ENDPOINT = "https://icanhazdadjoke.com/";
 
 exports.handler = async (event, context) => {
   const somethingElse = ["hello", "goodbye"];
-  const static = ["hello", "goodbye"];
+  const static2 = ["hello", "goodbye"];
 
   return fetch(API_ENDPOINT, { headers: { Accept: "application/json" } })
     .then((response) => response.json())
