@@ -58,6 +58,6 @@ exports.handler = async (event) => {
   return {
     statusCode: 200,
     contentType: "text/xml",
-    body: "hello there",
+    body: sitemap,
   };
 };
