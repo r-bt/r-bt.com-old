@@ -14,7 +14,9 @@
 
 <ul>
   <li>
-    <a href="https://www.alfiekohn.org/blog/" rel="noopener">Alfie Kohn's Blog</a>
+    <a href="https://www.alfiekohn.org/blog/" rel="noopener"
+      >Alfie Kohn's Blog</a
+    >
   </li>
 </ul>
 
@@ -31,4 +33,7 @@
 
 <ul>
   <li><a href="https://samenright.com/" rel="noopener">Sam Enright</a></li>
+  <li>
+    <a href="https://oregan.substack.com/" rel="noopener">Jack O'Regan Kenny</a>
+  </li>
 </ul>
