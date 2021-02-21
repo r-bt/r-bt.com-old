@@ -31,3 +31,7 @@ a {
     font-size: 16px;
   }
 }
+
+div.no-page-cover-spacer {
+  height: 0px !important;
+}

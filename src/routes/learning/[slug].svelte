@@ -6,7 +6,8 @@
 
 <script>
   import { onMount } from "svelte";
-  import { Notion } from "notion-in-svelte";
+  // import { Notion } from "notion-in-svelte";
+  import { Notion, notion } from "@noahsalvi/svelte-notion";
   import "prismjs/themes/prism-okaidia.css";
   import { stores } from "@sapper/app";
   // Stores
@@ -19,20 +20,21 @@
   const { page } = stores();
 
   export let slug;
-  let blocks;
+  let blocks = "";
   let post;
 
   $: if ($posts && process.browser) {
     post = $posts.find((post) => post.slug === slug);
     if (post) {
-      fetch(`${config.NOTION_API}/page/${post.id}`).then(async (res) => {
-        const post = await res.json();
+      // fetch(`${config.NOTION_API}/page/${post.id}`).then(async (res) => {
+      //   const post = await res.json();
 
-        const objectArray = Object.entries(post);
-        blocks = objectArray.map(([key, value]) => {
-          return value.value;
-        });
-      });
+      //   const objectArray = Object.entries(post);
+      //   blocks = objectArray.map(([key, value]) => {
+      //     return value.value;
+      //   });
+      // });
+      notion.fetchPage(post.id, window).then((resp) => (blocks = resp));
     }
   }
 
@@ -69,7 +71,7 @@
 <Profile title="Learning in Public" />
 
 <div class="content">
-  {#if blocks}
+  {#if blocks.length > 0}
     <Notion {blocks} />
   {:else}
     <p>Loading...</p>
