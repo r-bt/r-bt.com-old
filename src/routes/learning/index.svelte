@@ -12,6 +12,10 @@
 
 <svelte:head>
   <title>R-BT - Learning</title>
+  <meta
+    name="description"
+    content="A collection of posts about anything I find interesting"
+  />
 </svelte:head>
 
 <Profile title="Learning in Public" />

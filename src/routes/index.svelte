@@ -4,19 +4,9 @@
   const latestPost = posts[0];
 </script>
 
-<style>
-  .section {
-    margin-bottom: 2rem;
-  }
-
-  .section a {
-    display: block;
-    margin-top: 0.5rem;
-  }
-</style>
-
 <svelte:head>
   <title>R-BT</title>
+  <meta name="description" content="R-BT personal site" />
 </svelte:head>
 
 <Profile />
@@ -34,7 +24,20 @@
   <div class="section">
     <h3>What I previously worked on</h3>
     <a
-      href="https://abstracts.societyforscience.org/Home/FullAbstract?ProjectId=17466">BatIdentification</a>
+      href="https://abstracts.societyforscience.org/Home/FullAbstract?ProjectId=17466"
+      >BatIdentification</a
+    >
     <a href="https://www.producthunt.com/posts/ndesk">NDesk</a>
   </div>
 </div>
+
+<style>
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .section a {
+    display: block;
+    margin-top: 0.5rem;
+  }
+</style>
