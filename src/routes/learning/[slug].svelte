@@ -1,57 +1,39 @@
 <script context="module">
-  export function preload(page) {
-    return { slug: page.params.slug };
+  export async function preload({ params }) {
+    try {
+      const { blocks, meta } = await sotion.slugPage(params.slug);
+      return { blocks, meta, slug: params.slug };
+    } catch (e) {
+      return e;
+    }
   }
 </script>
 
 <script>
-  import { onMount } from "svelte";
-  // import { Notion } from "notion-in-svelte";
-  import { Notion, notion } from "@noahsalvi/svelte-notion";
   import "prismjs/themes/prism-okaidia.css";
   import { stores } from "@sapper/app";
+  import { Sotion, sotion } from "sotion";
   // Stores
-  import { posts, getPosts } from "./posts";
   // COMPONENTS
   import Profile from "../../components/Profile.svelte";
-  import config from "../../config";
   import profileImg from "images/profile.jpg";
 
   const { page } = stores();
 
+  export let blocks;
+  export let meta;
   export let slug;
-  let blocks = "";
-  let post;
-
-  $: if ($posts && process.browser) {
-    post = $posts.find((post) => post.slug === slug);
-    if (post) {
-      // fetch(`${config.NOTION_API}/page/${post.id}`).then(async (res) => {
-      //   const post = await res.json();
-
-      //   const objectArray = Object.entries(post);
-      //   blocks = objectArray.map(([key, value]) => {
-      //     return value.value;
-      //   });
-      // });
-      notion.fetchPage(post.id, window).then((resp) => (blocks = resp));
-    }
-  }
-
-  onMount(() => {
-    getPosts();
-  });
 </script>
 
 <svelte:head>
-  {#if post}
-    <title>{post.Name}</title>
-    <meta name="twitter:title" content={post.Name} />
-    <meta property="og:title" content={post.Name} />
-    {#if post.description}
-      <meta name="description" content={post.description} />
-      <meta name="twitter:description" content={post.description} />
-      <meta property="og:description" content={post.description} />
+  {#if meta}
+    <title>{meta.Name}</title>
+    <meta name="twitter:title" content={meta.Name} />
+    <meta property="og:title" content={meta.Name} />
+    {#if meta.description}
+      <meta name="description" content={meta.description} />
+      <meta name="twitter:description" content={meta.description} />
+      <meta property="og:description" content={meta.description} />
     {/if}
   {:else}
     <title>R-BT – Learning</title>
@@ -72,7 +54,7 @@
 
 <div class="content">
   {#if blocks.length > 0}
-    <Notion {blocks} />
+    <Sotion {blocks} />
   {:else}
     <p>Loading...</p>
   {/if}

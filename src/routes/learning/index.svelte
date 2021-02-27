@@ -1,10 +1,12 @@
 <script>
-  import { onMount } from "svelte";
   import Profile from "../../components/Profile.svelte";
-  import { getPosts, posts, status } from "./posts";
+  import { sotion } from "sotion";
+  import { onMount } from "svelte";
 
-  onMount(() => {
-    getPosts();
+  let posts = [];
+
+  onMount(async () => {
+    posts = await sotion.getScope();
   });
 </script>
 
@@ -14,19 +16,17 @@
 
 <Profile title="Learning in Public" />
 
-{#if $status === "error"}
-  <p>Hum...soenthing went wrong. Please try refreshing</p>
-{/if}
-
 <p>
   Here are some things I'm thinking about or find interesting. These are drafts
   and will be messy
 </p>
 
 <ul>
-  {#if $posts.length === 0 && $status === "loading"}<span>Loading...</span>{/if}
-  {#each $posts as item (item.id)}
-    <li><a href="learning/{item.slug}">{item.Name}</a></li>
+  {#if posts.length === 0}<span>Loading...</span>{/if}
+  {#each posts as item (item.id)}
+    {#if item.slug && item.Status === "Visible"}
+      <li><a href="learning/{item.slug}">{item.Name}</a></li>
+    {/if}
   {/each}
 </ul>
 
