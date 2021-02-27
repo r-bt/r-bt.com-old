@@ -1,5 +1,5 @@
 [build]
-    command = "cd functions/sitemap && npm install && cd ../../ && ls node_modules/sotion && npm run export"
+    command = "cd functions/sitemap && npm install && cd ../../ && npm install && npm run export"
     functions = "functions"
 
 [[redirects]]
