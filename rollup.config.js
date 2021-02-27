@@ -6,6 +6,7 @@ import url from "@rollup/plugin-url";
 import svelte from "rollup-plugin-svelte";
 import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
+import image from "svelte-image";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 import markdown from "@jackfranklin/rollup-plugin-markdown";
@@ -14,6 +15,13 @@ import glob from "rollup-plugin-glob";
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+
+const imageConfig = {
+  imgTagExtensions: ["jpg", "jpeg", "png"],
+  sizes: [100, 200, 600, 900, 1500],
+  breakpoints: [100, 200, 600, 900, 1024],
+  placeholder: "blur",
+};
 
 const onwarn = (warning, onwarn) =>
   (warning.code === "MISSING_EXPORT" && /'preload'/.test(warning.message)) ||
@@ -36,6 +44,9 @@ export default {
         dev,
         hydratable: true,
         emitCss: true,
+        preprocess: {
+          ...image(imageConfig),
+        },
       }),
       url({
         sourceDir: path.resolve(__dirname, "src/node_modules/images"),
@@ -95,6 +106,9 @@ export default {
         generate: "ssr",
         hydratable: true,
         dev,
+        preprocess: {
+          ...image(imageConfig),
+        },
       }),
       url({
         sourceDir: path.resolve(__dirname, "src/node_modules/images"),

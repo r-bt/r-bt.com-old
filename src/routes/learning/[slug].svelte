@@ -16,7 +16,6 @@
   // Stores
   // COMPONENTS
   import Profile from "../../components/Profile.svelte";
-  import profileImg from "images/profile.jpg";
 
   const { page } = stores();
 
@@ -41,11 +40,11 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@r_bt_" />
   <meta name="twitter:creator" content="@r_bt_" />
-  <meta name="twitter:image" content="https://r-bt.com{profileImg}" />
+  <meta name="twitter:image" content="https://r-bt.com/profile.jpg" />
 
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://r-bt.com{$page.path}" />
-  <meta property="og:image" content="https://r-bt.com{profileImg}" />
+  <meta property="og:image" content="https://r-bt.com/profile.jpg" />
   <meta property="og:site_name" content="R-BT Blog" />
 </svelte:head>
 

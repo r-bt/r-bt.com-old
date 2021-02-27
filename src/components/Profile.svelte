@@ -1,11 +1,13 @@
 <script>
-  import profile from "images/profile.jpg";
-
+  import Image from "svelte-image";
   export let title = "R-BT";
 </script>
 
 <div class="profile">
-  <img alt="Richard Beattie" src={profile} />
+  <div class="image-wrapper">
+    <Image alt="Richard Beattie" src="profile.jpg" />
+  </div>
+
   <div>
     <h1>{title}</h1>
     <div class="links">
@@ -31,10 +33,11 @@
     align-items: center;
   }
 
-  .profile > img {
+  .profile > .image-wrapper {
     width: 100px;
     height: 100px;
     display: inline-block;
+    padding: 0;
   }
 
   .profile > div {
