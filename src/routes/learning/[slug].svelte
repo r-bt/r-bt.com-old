@@ -22,7 +22,6 @@
 
   export let blocks;
   export let meta;
-  export let slug;
 </script>
 
 <svelte:head>
