@@ -1,4 +1,5 @@
 <script context="module">
+  import { Sotion, sotion } from "sotion";
   export async function preload({ params }) {
     try {
       const { blocks, meta } = await sotion.slugPage(params.slug);
@@ -11,16 +12,14 @@
 
 <script>
   import "prismjs/themes/prism-okaidia.css";
-  import { stores } from "@sapper/app";
-  import { Sotion, sotion } from "sotion";
+
   // Stores
   // COMPONENTS
   import Profile from "../../components/Profile.svelte";
 
-  const { page } = stores();
-
   export let blocks;
   export let meta;
+  export let slug;
 </script>
 
 <svelte:head>
@@ -43,7 +42,7 @@
   <meta name="twitter:image" content="https://r-bt.com/profile.jpg" />
 
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://r-bt.com{$page.path}" />
+  <meta property="og:url" content="https://r-bt.com/learning/{slug}" />
   <meta property="og:image" content="https://r-bt.com/profile.jpg" />
   <meta property="og:site_name" content="R-BT Blog" />
 </svelte:head>
@@ -66,5 +65,9 @@
 
   p {
     margin: 0;
+  }
+
+  :global(h2) {
+    padding-top: 1.25rem;
   }
 </style>
