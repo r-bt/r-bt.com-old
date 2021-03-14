@@ -6,11 +6,11 @@ import url from "@rollup/plugin-url";
 import svelte from "rollup-plugin-svelte";
 import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
-import image from "svelte-image";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 import markdown from "@jackfranklin/rollup-plugin-markdown";
 import glob from "rollup-plugin-glob";
+import image from "svelte-image";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -37,13 +37,17 @@ export default {
       markdown(),
       glob(),
       replace({
-        "process.browser": true,
-        "process.env.NODE_ENV": JSON.stringify(mode),
+        preventAssignment: true,
+        values: {
+          "process.browser": true,
+          "process.env.NODE_ENV": JSON.stringify(mode),
+        },
       }),
       svelte({
-        dev,
-        hydratable: true,
-        emitCss: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
         preprocess: {
           ...image(imageConfig),
         },
@@ -99,13 +103,19 @@ export default {
       markdown(),
       glob(),
       replace({
-        "process.browser": false,
-        "process.env.NODE_ENV": JSON.stringify(mode),
+        preventAssignment: true,
+        values: {
+          "process.browser": false,
+          "process.env.NODE_ENV": JSON.stringify(mode),
+        },
       }),
       svelte({
-        generate: "ssr",
-        hydratable: true,
-        dev,
+        compilerOptions: {
+          dev,
+          generate: "ssr",
+          hydratable: true,
+        },
+        emitCss: false,
         preprocess: {
           ...image(imageConfig),
         },
@@ -123,7 +133,6 @@ export default {
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules
     ),
-
     preserveEntrySignatures: "strict",
     onwarn,
   },
@@ -134,13 +143,15 @@ export default {
     plugins: [
       resolve(),
       replace({
-        "process.browser": true,
-        "process.env.NODE_ENV": JSON.stringify(mode),
+        preventAssignment: true,
+        values: {
+          "process.browser": true,
+          "process.env.NODE_ENV": JSON.stringify(mode),
+        },
       }),
       commonjs(),
       !dev && terser(),
     ],
-
     preserveEntrySignatures: false,
     onwarn,
   },

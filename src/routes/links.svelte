@@ -4,6 +4,10 @@
 
 <svelte:head>
   <title>R-BT - Links</title>
+  <meta
+    name="description"
+    content="Articles, blogs and people that I think are interesting"
+  />
 </svelte:head>
 
 <Profile title="Links" />

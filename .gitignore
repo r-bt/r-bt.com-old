@@ -1,12 +1,7 @@
 .DS_Store
 /node_modules/
-/functions/*/node_modules/
 /src/node_modules/@sapper/
 yarn-error.log
 /__sapper__/
-
-.firebase/
-
-# Local Netlify folder
-.netlify
+functions/render/build
 static/g/
