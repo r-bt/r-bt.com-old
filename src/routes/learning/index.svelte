@@ -1,13 +1,16 @@
+<script context="module">
+  import { sotion } from "sotion";
+
+  export async function preload() {
+    const posts = await sotion.getScope();
+    return { posts };
+  }
+</script>
+
 <script>
   import Profile from "../../components/Profile.svelte";
-  import { sotion } from "sotion";
-  import { onMount } from "svelte";
 
-  let posts = [];
-
-  onMount(async () => {
-    posts = await sotion.getScope();
-  });
+  export let posts;
 </script>
 
 <svelte:head>
@@ -29,7 +32,7 @@
   {#if posts.length === 0}<span>Loading...</span>{/if}
   {#each posts as item (item.id)}
     {#if item.slug && item.Status === "Visible"}
-      <li><a href="learning/{item.slug}">{item.Name}</a></li>
+      <li><a rel="prefetch" href="learning/{item.slug}">{item.Name}</a></li>
     {/if}
   {/each}
 </ul>

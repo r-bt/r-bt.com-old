@@ -13,8 +13,6 @@
 <script>
   import "prismjs/themes/prism-okaidia.css";
 
-  // Stores
-  // COMPONENTS
   import Profile from "../../components/Profile.svelte";
 
   export let blocks;

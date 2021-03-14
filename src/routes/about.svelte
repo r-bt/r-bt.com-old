@@ -1,9 +1,10 @@
 <script>
-  import Profile from '../components/Profile.svelte';
+  import Profile from "../components/Profile.svelte";
 </script>
 
 <svelte:head>
   <title>R-BT - About</title>
+  <meta name="description" content="About R-BT" />
 </svelte:head>
 
 <Profile title="About" />
@@ -24,7 +25,10 @@
   </p>
 
   <h3>Contact me</h3>
-  <p>If you're like me and also talking to people but are nervous when starting conversations, <br> here's some ways to contact me:</p>
+  <p>
+    If you're like me and also talking to people but are nervous when starting
+    conversations, <br /> here's some ways to contact me:
+  </p>
   <ul>
     <li>Ask for comments on a blog you've recently written</li>
     <li>Talk about an interesting thought that came to you</li>

@@ -133,7 +133,7 @@ npm install -g vercel
 vercel
 ```
 
-If your app can't be exported to a static site, you can use the [now-sapper](https://github.com/thgh/now-sapper) builder. You can find instructions on how to do so in its [README](https://github.com/thgh/now-sapper#basic-usage).
+If your app can't be exported to a static site, you can use the [vercel-sapper](https://github.com/thgh/vercel-sapper) builder. You can find instructions on how to do so in its [README](https://github.com/thgh/vercel-sapper#basic-usage).
 
 
 ## Using external components
@@ -146,6 +146,11 @@ Because of that, it's essential that the bundler doesn't treat the package as an
 npm install -D @sveltejs/svelte-virtual-list
 ```
 
+## Troubleshooting
+
+Using Windows and WSL2? 
+
+If your project lives outside the WSL root directory, [this limitation](https://github.com/microsoft/WSL/issues/4169) is known to cause live-reloading to fail. See [this issue](https://github.com/sveltejs/sapper/issues/1150) for details.
 
 ## Bugs and feedback
 
