@@ -5,31 +5,36 @@
 <nav>
   <ul>
     <li>
-      <a
-        aria-current="{segment === undefined ? 'page' : undefined}"
-        href="."
-      >Home</a>
+      <a aria-current={segment === undefined ? "page" : undefined} href="."
+        >Home</a
+      >
     </li>
     <li>
-      <a
-        aria-current="{segment === 'about' ? 'page' : undefined}"
-        href="about"
-      >About</a>
-    </li>
-    <li>
-      <a
-        rel="prefetch"
-        aria-current="{segment === 'blog' ? 'page' : undefined}"
-        href="blog"
-      >Blog</a>
+      <a aria-current={segment === "about" ? "page" : undefined} href="about"
+        >About</a
+      >
     </li>
     <li>
       <a
         rel="prefetch"
-        aria-current="{segment === 'learning' ? 'page' : undefined}"
-        href="learning"
-      >Learning</a>
+        aria-current={segment === "blog" ? "page" : undefined}
+        href="blog">Blog</a
+      >
     </li>
+    <li>
+      <a
+        rel="prefetch"
+        aria-current={segment === "learning" ? "page" : undefined}
+        href="learning">Learning</a
+      >
+    </li>
+    <!-- <li>
+      <a
+        rel="prefetch"
+        aria-current={segment === "mit" ? "page" : undefined}
+        href="mit">MIT</a
+      >
+    </li> -->
     <!-- <li>
       <a
         rel="prefetch"
@@ -40,9 +45,9 @@
     <li>
       <a
         rel="prefetch"
-        aria-current="{segment === 'links' ? 'page' : undefined}"
-        href="links"
-      >Links</a>
+        aria-current={segment === "links" ? "page" : undefined}
+        href="links">Links</a
+      >
     </li>
   </ul>
 </nav>
@@ -74,7 +79,7 @@
 
   a:after {
     bottom: -4px;
-    content: '';
+    content: "";
     display: block;
     height: 2px;
     left: 0;

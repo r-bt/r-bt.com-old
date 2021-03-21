@@ -1,6 +1,7 @@
 <script context="module">
   import { Sotion, sotion } from "sotion";
   export async function preload({ params }) {
+    sotion.setScope("489999d5f3d240c0a4fedd9de71cbb6f").setFetch(this.fetch);
     try {
       const { blocks, meta } = await sotion.slugPage(params.slug);
       return { blocks, meta, slug: params.slug };

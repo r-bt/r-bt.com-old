@@ -2,6 +2,7 @@
   import { sotion } from "sotion";
 
   export async function preload() {
+    sotion.setScope("489999d5f3d240c0a4fedd9de71cbb6f").setFetch(this.fetch);
     const posts = await sotion.getScope();
     return { posts };
   }

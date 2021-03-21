@@ -16,6 +16,7 @@
     "encoding": "0.1.13",
     "node-fetch": "^2.6.1",
     "polka": "next",
+    "prismjs": "^1.23.0",
     "rollup-plugin-glob": "^1.0.2",
     "serverless-http": "^2.7.0",
     "sirv": "^1.0.0"
@@ -35,7 +36,7 @@
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "sapper": "^0.28.0",
-    "sotion": "^1.1.0",
+    "sotion": "^1.1.1",
     "svelte": "^3.17.3",
     "svelte-image": "^0.2.9"
   }

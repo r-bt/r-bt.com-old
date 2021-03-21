@@ -1,10 +1,3 @@
-<script context="module" lang="ts">
-  import { sotion } from "sotion";
-  export async function preload() {
-    sotion.setScope("489999d5f3d240c0a4fedd9de71cbb6f").setFetch(this.fetch);
-  }
-</script>
-
 <script>
   import Nav from "../components/Nav.svelte";
 

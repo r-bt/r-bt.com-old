@@ -1,7 +1,7 @@
 <script>
   import Profile from "../components/Profile.svelte";
-  import { posts } from "./blog/_posts";
-  const latestPost = posts[0];
+  // import { posts } from "./blog/_posts";
+  // const latestPost = posts[0];
 </script>
 
 <svelte:head>
@@ -13,10 +13,10 @@
 
 <div class="brief info">
   <p>Hi I'm Richard. This site is a place for me to collect all my thoughts.</p>
-  <div class="section">
+  <!-- <div class="section">
     <h3>What have I recently written:</h3>
     <a href="/blog/{latestPost.permalink}">{latestPost.title}</a>
-  </div>
+  </div> -->
   <div class="section">
     <h3>What I'm currently working on</h3>
     <a href="https://prepsheets.com">PrepSheets</a>

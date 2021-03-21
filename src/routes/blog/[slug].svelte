@@ -1,91 +1,72 @@
 <script context="module">
-  import { findPost } from "./_posts";
-
-  export function preload(page) {
-    const post = findPost(page.params.slug);
-    return { post };
+  import { Sotion, sotion } from "sotion";
+  export async function preload({ params }) {
+    sotion.setScope("d10d9720a94e4f1a8bc2424a3dfa71a6").setFetch(this.fetch);
+    try {
+      const { blocks, meta } = await sotion.slugPage(params.slug);
+      return { blocks, meta, slug: params.slug };
+    } catch (e) {
+      return e;
+    }
   }
 </script>
 
 <script>
-  import { stores } from "@sapper/app";
-  const { page } = stores();
+  import "prismjs/themes/prism-okaidia.css";
+
   import Profile from "../../components/Profile.svelte";
-  import Index from "./index.svelte";
 
-  export let post;
-
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  const date = post.date.toLocaleDateString("en-IE", options);
+  export let blocks;
+  export let meta;
+  export let slug;
 </script>
 
 <svelte:head>
-  <title>{post.title}</title>
-  <meta name="description" content={post.description} />
+  {#if meta}
+    <title>{meta.Name}</title>
+    <meta name="twitter:title" content={meta.Name} />
+    <meta property="og:title" content={meta.Name} />
+    {#if meta.description}
+      <meta name="description" content={meta.description} />
+      <meta name="twitter:description" content={meta.description} />
+      <meta property="og:description" content={meta.description} />
+    {/if}
+  {:else}
+    <title>R-BT – Blog</title>
+  {/if}
+
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@r_bt_" />
-  <meta name="twitter:title" content={post.title} />
-  <meta name="twitter:description" content={post.description} />
   <meta name="twitter:creator" content="@r_bt_" />
   <meta name="twitter:image" content="https://r-bt.com/profile.jpg" />
-  <meta property="og:title" content={post.title} />
+
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://r-bt.com{$page.path}" />
+  <meta property="og:url" content="https://r-bt.com/blog/{slug}" />
   <meta property="og:image" content="https://r-bt.com/profile.jpg" />
-  <meta property="og:description" content={post.description} />
   <meta property="og:site_name" content="R-BT Blog" />
 </svelte:head>
 
-<Profile title={post.title} />
-
-<div class="summary">
-  <h4><b>Summary:</b> {post.summary}</h4>
-  <h5>{date}</h5>
-</div>
+<Profile title={meta.Name} />
 
 <div class="content">
-  {@html post.html}
+  {#if blocks.length > 0}
+    <Sotion {blocks} />
+  {:else}
+    <p>Loading...</p>
+  {/if}
 </div>
 
 <style>
-  .summary {
-    margin-top: 1rem;
-    border-bottom: 1px solid rgb(33, 33, 33);
-    max-width: 700px;
+  div.content {
+    padding-top: 30px;
+    width: 80%;
   }
 
-  .summary > h4 {
-    font-weight: 500;
-    line-height: 1.5rem;
+  p {
+    margin: 0;
   }
 
-  .content {
-    max-width: 700px;
-  }
-
-  .content :global(h2) {
-    font-size: 1.4em;
-    font-weight: 500;
-  }
-
-  .content :global(pre) {
-    background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-    padding: 0.5em;
-    border-radius: 2px;
-    overflow-x: auto;
-  }
-
-  .content :global(pre) :global(code) {
-    background-color: transparent;
-    padding: 0;
-  }
-
-  .content :global(ul) {
-    line-height: 1.5;
-  }
-
-  .content :global(li) {
-    margin: 0 0 0.5em 0;
+  :global(h2) {
+    padding-top: 1.25rem;
   }
 </style>
