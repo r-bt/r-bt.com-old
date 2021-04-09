@@ -11,6 +11,7 @@ import pkg from "./package.json";
 import markdown from "@jackfranklin/rollup-plugin-markdown";
 import glob from "rollup-plugin-glob";
 import image from "svelte-image";
+import { mdsvex } from "mdsvex";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -48,9 +49,13 @@ export default {
           dev,
           hydratable: true,
         },
-        preprocess: {
-          ...image(imageConfig),
-        },
+        extensions: [".svelte", ".svx"],
+        preprocess: [
+          {
+            ...image(imageConfig),
+          },
+          mdsvex(),
+        ],
       }),
       url({
         sourceDir: path.resolve(__dirname, "src/node_modules/images"),
@@ -115,10 +120,14 @@ export default {
           generate: "ssr",
           hydratable: true,
         },
+        extensions: [".svelte", ".svx"],
         emitCss: false,
-        preprocess: {
-          ...image(imageConfig),
-        },
+        preprocess: [
+          {
+            ...image(imageConfig),
+          },
+          mdsvex(),
+        ],
       }),
       url({
         sourceDir: path.resolve(__dirname, "src/node_modules/images"),

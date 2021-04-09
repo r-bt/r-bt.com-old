@@ -28,13 +28,13 @@
         href="learning">Learning</a
       >
     </li>
-    <!-- <li>
+    <li>
       <a
         rel="prefetch"
         aria-current={segment === "mit" ? "page" : undefined}
         href="mit">MIT</a
       >
-    </li> -->
+    </li>
     <!-- <li>
       <a
         rel="prefetch"

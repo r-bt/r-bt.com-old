@@ -1,0 +1,14 @@
+<script>
+  import Profile from "../../components/Profile.svelte";
+</script>
+
+<svelte:head>
+
+  <title>R-BT - About</title>
+  <meta name="description" content="Information about the ASEs at MIT" />
+</svelte:head>
+
+<Profile title="📝 ASEs – MIT" />
+
+During orientation ASEs are graded P/NR. If exam is passed, P will show up on external transcript.
+Does not count toward fall credit limit.

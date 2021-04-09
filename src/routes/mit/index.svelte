@@ -15,8 +15,9 @@
 </p>
 
 <ul>
-  <li><a href="/mit/ases" rel="prefetch">📝 ASEs</a></li>
-  <li><a href="/mit/dorms" rel="prefetch">🛏️ Dorms</a></li>
+  <li><a href="/mit/dorms">🛏 Dorms</a></li>
+  <li><a href="/mit/ases">📝 ASEs</a></li>
+  <li><a href="/mit/learning-communities">🧩 Learning</a></li>
 </ul>
 
 <style>
@@ -26,5 +27,6 @@
 
   ul > li {
     font-size: 18px;
+    margin-top: 0.7rem;
   }
 </style>

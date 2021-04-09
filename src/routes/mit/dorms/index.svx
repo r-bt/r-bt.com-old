@@ -1,0 +1,70 @@
+<script>
+  import Profile from "../../../components/Profile.svelte";
+</script>
+
+<svelte:head>
+
+  <title>R-BT - About</title>
+  <meta name="description" content="Information about the dorms at MIT" />
+</svelte:head>
+
+<Profile title="🛏 Dorms - MIT" />
+
+**Disclaimer:** I have **no** first-hand experience of MIT dorms. Most MIT
+first-years live in one of 10 houses on campus. You pick which dorms you want to
+live in, and each have different cultures. This is a (growing) collection of information
+I've found while searching for which dorms I want to live in. It's intended to
+remind me of what I've found and potentially help other people start researching
+dorms. However, don't use this on it's own and try talk to actual students in dorms.
+
+## General Information
+
+| Name                             | Considering | Cook for yourself | Capacity |
+| -------------------------------- | :---------: | :---------------: | -------- |
+| Baker House                      |     ❌      |        ❌         | 383      |
+| Burton Conner House              |     ✅      |        ✅         | 371      |
+| East Campus                      |     ✅      |        ❌         | 383      |
+| MacGregor House                  |     ✅      |        ✅         | 313      |
+| Maseeh Hall                      |     ✅      |        ❌         | 500      |
+| New House                        |     ✅      |        ✅         | ?        |
+| New Vassar                       |     ✅      |        ❌         | 450      |
+| Next House                       |     ✅      |        ❌         | 368      |
+| [Random Hall](/mit/dorms/random) |     ✅      |        ✅         | 93       |
+| Simmons Hall                     |     ✅      |        ❌         | 369      |
+
+<h2>Links</h2>
+
+- [MIT Undergraduate Residence Halls](https://mitguidetoresidences.mit.edu/house-summary)
+- [ Guide to choosing a dorm ](https://mitadmissions.org/blogs/entry/how-to-not-choose-a-dorm/)
+
+<style>
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 2rem;
+  }
+  table td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 8px 5px;
+    word-break: normal;
+  }
+  table th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 8px 5px;
+    word-break: normal;
+    text-align: left;
+    font-weight: bold;
+  }
+  /* x */
+</style>

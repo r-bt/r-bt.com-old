@@ -1,0 +1,24 @@
+<script>
+  import Profile from "../../components/Profile.svelte";
+</script>
+
+<svelte:head>
+
+  <title>R-BT - About</title>
+  <meta
+    name="description"
+    content="Information about the Learning Communities at MIT"
+  />
+</svelte:head>
+
+<Profile title="🧩 Learning – MIT" />
+
+MIT has three learning communities, I know basically nothing about them but they sound interesting:
+
+- ESG
+- Terrascope
+- Concourse
+
+## Links
+
+- [Office of the first year](https://firstyear.mit.edu/academics-exploration/learning-communities)
