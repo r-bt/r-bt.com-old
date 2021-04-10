@@ -17,7 +17,7 @@
 <ul>
   <li><a href="/mit/dorms">🛏 Dorms</a></li>
   <li><a href="/mit/ases">📝 ASEs</a></li>
-  <li><a href="/mit/learning-communities">🧩 Learning</a></li>
+  <li><a href="/mit/learning-communities">🧩 Learning Communities</a></li>
 </ul>
 
 <style>

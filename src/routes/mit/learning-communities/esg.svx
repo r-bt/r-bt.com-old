@@ -1,0 +1,46 @@
+<script>
+  import Profile from "../../../components/Profile.svelte";
+</script>
+
+<svelte:head>
+
+  <title>R-BT - About</title>
+  <meta
+    name="description"
+    content="Information about the ESG at MIT"
+  />
+</svelte:head>
+
+<Profile title="ESG - 🧩 Learning Communities – MIT" />
+
+Key points:
+
+- Provides [GIRs](https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs) in samll discussion based classes (~12 people)
+- Can mix & match ESG and mainstream GIRs
+- Has communitiy activites, lunches, study sessions, etc
+- Limited to 55 people
+- Is my advising seminar. What's an advising seminar?
+
+From experience I much prefer and do better in discussion based classes and learning from others, making this very appealing.
+
+- Having to actually think about the content and getting the chance in class to talk about it sounds great
+- Seems like they're interested in teaching methods which is super cool (since most teaching is highly ineffiecent)
+
+They also run seminars for all students, really interesting topics:
+
+- ES.92 Authenticity - How to live an authentic life throuhg works of eastern & western philosophers
+- ES.S90 Designing Adaptive Prison Solutions - Designing prisions that are approriate for those with disabilities
+
+I wonder are the classes always different or do they repeat?
+
+Also provides a social space and events to attend.
+
+## Joining
+
+1. Must attend an information session (offered during CPW, June and August)
+2. If more applications run a lottery for the spaces
+3. Will also have to fill out an an application (unclear if this influneces the lottery)
+
+## Links
+
+- [ESG Website](https://esg.mit.edu/)
