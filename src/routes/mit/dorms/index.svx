@@ -11,28 +11,88 @@
 <Profile title="🛏 Dorms - MIT" />
 
 **Disclaimer:** I have **no** first-hand experience of MIT dorms. Most MIT
-first-years live in one of 10 houses on campus. You pick which dorms you want to
+first-years live in one of 11 houses on campus. You pick which dorms you want to
 live in, and each have different cultures. This is a (growing) collection of information
 I've found while searching for which dorms I want to live in. It's intended to
 remind me of what I've found and potentially help other people start researching
 dorms. However, don't use this on it's own and try talk to actual students in dorms.
 
+If anything I've written is incorrecct or you have more info feel free to contact me or edit the source at: [r-bt.com Github repo](https://github.com/r-bt/r-bt.com)
+
 ## General Information
 
-| Name                             | Considering | Cook for yourself | Capacity |
-| -------------------------------- | :---------: | :---------------: | -------- |
-| Baker House                      |     ❌      |        ❌         | 383      |
-| Burton Conner House              |     ✅      |        ✅         | 371      |
-| East Campus                      |     ✅      |        ❌         | 383      |
-| MacGregor House                  |     ✅      |        ✅         | 313      |
-| Maseeh Hall                      |     ✅      |        ❌         | 500      |
-| New House                        |     ✅      |        ✅         | ?        |
-| New Vassar                       |     ✅      |        ❌         | 450      |
-| Next House                       |     ✅      |        ❌         | 368      |
-| [Random Hall](/mit/dorms/random) |     ✅      |        ✅         | 93       |
-| Simmons Hall                     |     ✅      |        ❌         | 369      |
+| Name                                    | Considering | Cook for yourself | Capacity |
+| --------------------------------------- | :---------: | :---------------: | -------- |
+| Burton Conner House                     |     ✅      |        ✅         | 371      |
+| [MacGregor House](/mit/dorms/macgregor) |     ✅      |        ✅         | 313      |
+| New House                               |     ✅      |        ✅         | ?        |
+| [Random Hall](/mit/dorms/random)        |     ✅      |        ✅         | 93       |
+| East Campus                             |     ✅      |        ✅         | 383      |
+| [Baker House](/mit/dorms/baker)         |     ❌      |        ❌         | 383      |
+| Maseeh Hall                             |     ❌      |        ❌         | 500      |
+| [New Vassar](/mit/dorms/newvassar)      |     ❌      |        ❌         | 450      |
+| Next House                              |     ❌      |        ❌         | 368      |
+| Simmons Hall                            |     ❌      |        ❌         | 369      |
 
-<h2>Links</h2>
+- Note [McCormick](https://mitguidetoresidences.mit.edu/map/mccormick-hall) as a female-only dorm was is not included
+
+## Factors I'm considering
+
+### Cook for myself **or** meal plan
+
+Either way this will half the dorms I can consider.
+
+Michael C. makes a strong case for cooking for yourself [here](https://mitadmissions.org/blogs/entry/the-starving-students-guide-to-cooking-for-yourself/). The least expensive option (in a normal year) I could find is 190 meals a semester at **$2,844**. Each semester is ~14 weeks so that's **$203** a week for 14 meals.
+
+Things seem to be better than when Michael wrote that post however as:  
+ _"All meal plans can be used for breakfast, lunch, dinner, late-night, or weekend brunch"_
+See: [House Dining Meal Plans (Wayback Machine 2019)](https://web.archive.org/web/20191119042456/http://studentlife.mit.edu/dining/residential-dining/meal-plans)
+
+His figure of **$60 a week** for groceries seems resonable which is substantially cheaper.
+
+So the advantages then are:
+
+- Much cheaper
+- Freedom over when and where I eat
+  - E.g. not adding $14.50 everytime I eat out
+- Healthier (I went 6 weeks of American food once and it wasn't great 😔)
+- Learn how to cook earlier (I'll need to learn at some stage)
+
+The disadvantages:
+
+- Time commitment. There's a big convience in just being able to get food instead of mentaly jugginling time commitments for cooking & (more importantly) prepping food
+- Arguable more social as you:
+  - have a reason to move around to different dining holes
+  - can follow your friends to their house's dining hall
+  - more time to sit and talk around a table
+
+However:
+
+- On a meal plan I'd need to sort out lunch.
+  - Either buy the more expensive option, eat out, or get bread and meat for sandwitches. So I'd have to go a supermarket anyway.
+- Cooking with / for people can also be quite social
+- The time commitment can be smaller with planning and non-complicated meals. E.g:
+  - **Breakfast**: Cereal - Super easy
+  - **Lunch**: Sandwitch and some fruit
+  - **Dinner**: I could just make 2 - 3 meals to do me for week (e.g. cook off burget meat then use that for bologense also)
+- It's quite expensive when I break if down:
+  - Say 1/3 is breakfast = $10. But all I want is cereal.
+
+**Therefore I pick cooking for myself.**
+
+**See also:**
+
+- [Cooking for Myself by Anelise N. '19](https://mitadmissions.org/blogs/entry/cooking-for-myself/)
+
+## Ruling out
+
+Ok, to get this done somewhat quickly I'll going to do process of elimination:
+
+## Miscelaneous
+
+Seems like there is a East / West Campus divide in terms of dorm cultures
+
+## Links
 
 - [MIT Undergraduate Residence Halls](https://mitguidetoresidences.mit.edu/house-summary)
 - [ Guide to choosing a dorm ](https://mitadmissions.org/blogs/entry/how-to-not-choose-a-dorm/)

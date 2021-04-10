@@ -1,0 +1,40 @@
+<script>
+  import Profile from "../../../components/Profile.svelte";
+</script>
+
+<svelte:head>
+
+  <title>R-BT - About</title>
+  <meta name="description" content="Information about Baker House, MIT" />
+</svelte:head>
+
+<Profile title="Baker House – 🛏 Dorms - MIT" />
+
+It's hard to find specific information about the culture here. Seems to be:
+
+- Social
+- Sporty (Due to closeness to fields / facilities lots of athletes live here)
+
+Baker has some good pros:
+
+- All rooms have sinks which is super handy
+- Really close to Z-Center and classes
+- View of the Charles river
+
+However:
+
+- It's expensive (dining plan and $6,530-$4,560 per semester)
+
+**Decision:**
+
+## Links
+
+- [MIT Residences – Baker House](https://mitguidetoresidences.mit.edu/map/baker-house)
+
+### MIT Admissions Blog Posts
+
+<style>
+    .split {
+        display: flex;
+    }
+</style>

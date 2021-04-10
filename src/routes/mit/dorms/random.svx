@@ -64,10 +64,20 @@ It is a **cook for yourself** dorm
 
 It's quite out of date but in 2012 The Tech did a [survey of pressures](http://tech.mit.edu/V132/N59/pressure/breakdown/residence/index.htm) students and yikes Random didn't come out that well.
 
+- **"I am satisfied with the quality of my friendships."** – 56% of Random said yes (average 66.53%), lowest of all undergraduate dorms
+
+But as an aside some of the other questions help with imposter syndrome:
+
+- **"Are you extroverted?"** - 33% said yes
+
 ## Links
 
 - [MIT Residences – Random Hall](https://mitguidetoresidences.mit.edu/map/random-hall)
 - [About Random Hall](http://web.mit.edu/random-hall/www/about.shtml)
+
+### MIT Admissions Blog Posts
+
+- [I Miss You, Random Hall](https://mitadmissions.org/blogs/entry/i-miss-you-random-hall/)
 
 <style>
     .split {

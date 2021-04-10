@@ -1,0 +1,25 @@
+<script>
+  import Profile from "../../../components/Profile.svelte";
+</script>
+
+<svelte:head>
+
+  <title>R-BT - About</title>
+  <meta name="description" content="Information about New Vassar, MIT" />
+</svelte:head>
+
+<Profile title="New Vassar – 🛏 Dorms - MIT" />
+
+**Decision:**
+
+## Links
+
+- [MIT Residences – New Vassar](https://mitguidetoresidences.mit.edu/map/new-vassar)
+
+### MIT Admissions Blog Posts
+
+<style>
+    .split {
+        display: flex;
+    }
+</style>

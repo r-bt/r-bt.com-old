@@ -1,0 +1,45 @@
+<script>
+  import Profile from "../../../components/Profile.svelte";
+</script>
+
+<svelte:head>
+
+  <title>R-BT - About</title>
+  <meta name="description" content="Information about MacGregor House, MIT" />
+</svelte:head>
+
+<Profile title="MacGregor House – 🛏 Dorms - MIT" />
+
+Is **99%** singles. Singles are grouped into suites of either 6 or 8 people. Suites have:
+
+- Bathroom
+- Kitchen
+- Suite lounge
+- Graduate Resident Advisor (GRA)
+
+Suites are then grouped into 9 entries (living units of about 30-44 people).
+
+Building itself has:
+
+- Weight room
+- Game room (Projector, Switch, PS4, puzzles, air hockey, ping pong, foosball, etc.)
+- Music room (equipped with guitars, drums, and a piano)
+- Study spaces (including group study rooms, whiteboards, library-like atmospheres, and an Athena computer cluster)
+
+Some cons:
+
+- Expensive: $6,100 - $5,390 & Dining plan
+
+**Decision:**
+
+## Links
+
+- [MIT Residences – MacGregor House](https://mitguidetoresidences.mit.edu/map/macgregor-house)
+
+### MIT Admissions Blog Posts
+
+<style>
+    .split {
+        display: flex;
+    }
+</style>
